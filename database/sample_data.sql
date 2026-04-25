@@ -1,0 +1,2 @@
+-- Sample data for CIMWOMS database
+-- This file will contain INSERT statements for testing the database.
