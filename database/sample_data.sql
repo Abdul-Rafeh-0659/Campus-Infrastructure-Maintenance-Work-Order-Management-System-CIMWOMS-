@@ -1,6 +1,6 @@
 PRAGMA foreign_keys = ON;
 
--- FAST-inspired sample data for CIMWOMS
+-- FAST PESHAWAR inspired sample data for CIMWOMS
 -- Fictional records based on realistic campus rooms and facilities.
 -- CS, AI, SE and CE labs are treated as part of one Computing Block.
 
@@ -13,6 +13,7 @@ VALUES
 ('Administration Block', 'ADM', 'Central Campus'),
 ('Masjid', 'MSJ', 'Campus Facilities'),
 ('Boys Hostel', 'HST', 'Residential Area');
+
 
 -- 2. rooms
 INSERT INTO rooms(building_id, room_number, floor_no, room_type)
@@ -51,6 +52,7 @@ VALUES
 
 (6, 'Hostel Room B-101', 1, 'Hostel Room'),
 (6, 'Hostel Study Room', 0, 'Study Room');
+
 
 -- 3. asset_types
 INSERT INTO asset_types(type_name, description)
@@ -126,6 +128,7 @@ VALUES
 ('Lab Equipment', 'Problems with computing or electronics lab equipment'),
 ('General Maintenance', 'General repair and maintenance requests');
 
+
 -- 7. work_orders
 INSERT INTO work_orders(reported_by, room_id, asset_id, category_id, title, description, priority, status, reported_at, due_date, completed_at)
 VALUES
@@ -145,6 +148,7 @@ VALUES
 (1, 14, NULL, 8, 'Mehboob PC Lab door lock issue', 'The door lock of Mehboob PC Lab is difficult to open and close.', 'MEDIUM', 'OPEN', '2026-04-17 16:00:00', '2026-04-22', NULL),
 (3, 29, 26, 4, 'Hostel study room desk damaged', 'One desk in the hostel study room has a loose side panel.', 'LOW', 'ASSIGNED', '2026-04-18 10:40:00', '2026-04-24', NULL);
 
+
 -- 8. assignments
 INSERT INTO assignments(work_order_id, technician_id, assigned_by, assigned_at, assignment_role)
 VALUES
@@ -158,6 +162,7 @@ VALUES
 (11, 9, 5, '2026-04-15 09:00:00', 'Primary Technician'),
 (12, 6, 4, '2026-04-15 19:00:00', 'Primary Technician'),
 (15, 9, 5, '2026-04-18 11:00:00', 'Primary Technician');
+
 
 -- 9. status_history
 INSERT INTO status_history(work_order_id, old_status, new_status, changed_by, changed_at, changed_note)
